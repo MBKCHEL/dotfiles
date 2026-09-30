@@ -1,17 +1,31 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+        },
         config = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+        vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            underline = true,
+            update_in_insert = true,
+            float = {
+                focusable = false,
+                style = "minimal",
+                border = "rounded",
+                source = "always",
+            },
+        })
+
         vim.lsp.config("rust_analyzer", {
             cmd = { "rust-analyzer" },
-            filetypes = { "rust" },
-            root_markers = { "Cargo.toml", "rust-project.json" },
             capabilities = capabilities,
             settings = {
                 ["rust-analyzer"] = {
-                    check = {
+                    checkOnSave = {
                         command = "clippy",
                     },
                 },
@@ -20,10 +34,8 @@ return {
 
         vim.lsp.enable("rust_analyzer")
 
-        -- Хоткеи
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
-        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Показать документацию" })
+        vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Показать текст ошибки" })
         end,
     },
 }

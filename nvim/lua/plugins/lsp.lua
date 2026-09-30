@@ -37,6 +37,7 @@ return {
 
         vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Показать документацию" })
         vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Показать текст ошибки" })
+        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Действия с кодом (Code Actions)" })
         end,
     },
 }

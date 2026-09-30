@@ -15,7 +15,6 @@ return {
             window = {
                 width = 30,
                 mappings = {
-                    ["<CR>"] = "open",
                     ["l"] = "open",
                     ["o"] = "open",
                 },

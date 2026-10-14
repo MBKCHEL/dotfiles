@@ -33,6 +33,9 @@ binds {
     Ctrl+Alt+T { spawn "foot"; }
     Mod+T { spawn "foot"; }
     Mod+B { spawn "zen-browser"; }
+    Mod+Alt+D {spawn "vesktop"; }
+    Mod+Alt+S {spawn "steam"; }
+    Mod+O {spawn "openrgb"; }
 
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
@@ -55,7 +58,7 @@ binds {
     Mod+Shift+Down  { move-window-down; }
     Mod+Shift+Up    { move-window-up; }
 
-     Mod+1			        { focus-workspace 1; }
+    Mod+1			        { focus-workspace 1; }
      Mod+2		        	{ focus-workspace 2; }
      Mod+3		        	{ focus-workspace 3; }
      Mod+4		        	{ focus-workspace 4; }
@@ -149,7 +152,6 @@ layout {
  	//block-out-from "screen-capture"
  	open-focused false
  }
-
  window-rule {
  	match app-id="firefox$" title="^Picture-in-Picture$"
  	open-floating true

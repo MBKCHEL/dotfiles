@@ -35,6 +35,7 @@ binds {
     Mod+B { spawn "zen-browser"; }
     Mod+Alt+D {spawn "vesktop"; }
     Mod+Alt+S {spawn "steam"; }
+    Mod+Alt+T {spawn "Telegram"; }
     Mod+O {spawn "openrgb"; }
 
     Mod+Comma  { consume-window-into-column; }

@@ -46,6 +46,7 @@ binds {
 
     Mod+Q { close-window; }
     Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
     Mod+R { switch-preset-column-width; }
     Mod+Shift+Delete { quit; }
 

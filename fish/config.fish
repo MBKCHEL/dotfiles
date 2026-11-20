@@ -19,6 +19,7 @@ alias gc="git commit"
 alias ga="git add"
 alias gst="git status"
 alias gp="git push"
+alias gpl="git pull"
 alias cc="cargo check"
 alias nv="nvibrant"
 

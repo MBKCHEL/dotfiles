@@ -14,6 +14,7 @@ sysprint
 alias v="nvim"
 alias cbr="cargo build --release"
 alias cr="cargo run"
+alias crr="cargo run --release"
 alias cb="cargo build"
 alias gc="git commit"
 alias ga="git add"

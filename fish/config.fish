@@ -29,3 +29,21 @@ function take
     mkdir -p $argv[1] && cd $argv[1]
 end
 
+# Write multiline text to a file until EOF
+function eof
+    if test -z "$argv[1]"
+        echo "Usage: eof <filename>"
+        return 1
+    end
+
+    printf "" > "$argv[1]"
+    echo "Type your text (enter EOF on a new line to save):"
+
+    set -l IFS
+    while read -l line
+        if test "$line" = "EOF"
+            break
+        end
+        printf "%s\n" "$line" >> "$argv[1]"
+    end
+end

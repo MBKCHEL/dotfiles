@@ -21,6 +21,7 @@ alias ga="git add"
 alias gst="git status"
 alias gp="git push"
 alias gpl="git pull"
+alias gd="git diff"
 alias cc="cargo check"
 alias nv="nvibrant"
 
